@@ -1,3 +1,5 @@
+import math
+
 #709 To lower case
 def to_lower(s):
     return s.lower()
@@ -35,3 +37,9 @@ def numJewelsInStones(jewels: str, stones: str) -> int:
             if stone in jewels:
                 res+=1
         return res
+    
+#367. Valid Perfect Square
+def isPerfectSquare(num: int) -> bool:
+        return str(math.sqrt(num)).split('.')[-1]=='0'
+    
+print(isPerfectSquare(16))
