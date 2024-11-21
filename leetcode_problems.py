@@ -43,3 +43,7 @@ def isPerfectSquare(num: int) -> bool:
         return str(math.sqrt(num)).split('.')[-1]=='0'
     
 print(isPerfectSquare(16))
+
+#344. Reverse String
+def reverseString(s):
+    s.reverse()
