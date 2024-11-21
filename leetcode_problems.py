@@ -73,3 +73,11 @@ def arrayStringsAreEqual(word1: List[str], word2: List[str]) -> bool:
     return ''.join(word1) == ''.join(word2)
 
 print(arrayStringsAreEqual(word1 = ["a", "cb"], word2 = ["ab", "c"]))
+
+#231. Power of Two
+def isPowerOfTwo(n: int) -> bool:
+    if n<=0:
+        return False
+    return str(math.log2(n)).split('.')[-1] == '0'
+
+print(isPowerOfTwo(0))
