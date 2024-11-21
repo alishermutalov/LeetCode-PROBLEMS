@@ -23,3 +23,7 @@ def defangIPaddr(address: str) -> str:
         return address.replace('.','[.]')
     
 print(defangIPaddr("1.1.1.1"))
+
+#1816. Truncate Sentence
+def truncateSentence(s: str, k: int) -> str:
+        return ' '.join(s.split(' ')[:k])
