@@ -1,4 +1,5 @@
 import math
+from typing import List
 
 #709 To lower case
 def to_lower(s):
@@ -47,3 +48,13 @@ print(isPerfectSquare(16))
 #344. Reverse String
 def reverseString(s):
     s.reverse()
+
+#1480. Running Sum of 1d Array
+def runningSum(nums: List[int]) -> List[int]:
+    res = []
+    for index in range(len(nums)):
+        res.append(sum(nums[:index+1]))
+    
+    return res
+
+print(runningSum([1,2,3,4]))
