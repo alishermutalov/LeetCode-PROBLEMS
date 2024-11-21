@@ -58,3 +58,12 @@ def runningSum(nums: List[int]) -> List[int]:
     return res
 
 print(runningSum([1,2,3,4]))
+
+#1528. Shuffle String
+def restoreString(s: str, indices: List[int]) -> str:
+    res = ''
+    for i in range(len(indices)):
+        res += s[indices.index(i)]
+    return res
+
+print(restoreString(s = "codeleet", indices = [4,5,6,7,0,2,1,3]))
