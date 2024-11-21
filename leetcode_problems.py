@@ -1,7 +1,7 @@
 #709 To lower case
-
 def to_lower(s):
     pass
+    
 #242 is anagram
 def isAnagram(s: str, t: str) -> bool:
         return sorted(s)==sorted(t)
