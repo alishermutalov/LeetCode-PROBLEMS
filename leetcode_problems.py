@@ -67,3 +67,9 @@ def restoreString(s: str, indices: List[int]) -> str:
     return res
 
 print(restoreString(s = "codeleet", indices = [4,5,6,7,0,2,1,3]))
+
+#1662. Check If Two String Arrays are Equivalent
+def arrayStringsAreEqual(word1: List[str], word2: List[str]) -> bool:
+    return ''.join(word1) == ''.join(word2)
+
+print(arrayStringsAreEqual(word1 = ["a", "cb"], word2 = ["ab", "c"]))
