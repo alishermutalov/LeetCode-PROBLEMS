@@ -27,3 +27,11 @@ print(defangIPaddr("1.1.1.1"))
 #1816. Truncate Sentence
 def truncateSentence(s: str, k: int) -> str:
         return ' '.join(s.split(' ')[:k])
+    
+#771. Jewels and Stones
+def numJewelsInStones(jewels: str, stones: str) -> int:
+        res = 0
+        for stone in stones:
+            if stone in jewels:
+                res+=1
+        return res
