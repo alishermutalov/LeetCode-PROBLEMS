@@ -106,3 +106,15 @@ def canBeEqual(target: List[int], arr: List[int]) -> bool:
     return arr == target
 
 print(canBeEqual(target = [1,2,3,4], arr = [2,4,3,3]))
+
+#1437. Check If All 1's Are at Least Length K Places Away
+def kLengthApart(nums: List[int], k: int) -> bool:
+    index_list = [index for index, value in enumerate(nums) if value==1]
+    for i in range(len(index_list)):
+        if i+1 < len(index_list):
+            if index_list[i+1]-index_list[i]-1<k:
+                return False
+    
+    return True
+      
+print(kLengthApart(nums = [1,0,0,1,0,0,1], k = 2))
