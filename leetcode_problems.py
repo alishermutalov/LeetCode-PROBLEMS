@@ -98,3 +98,11 @@ def fizzBuzz(n: int) -> List[str]:
     return res
 
 print(fizzBuzz(3))
+
+#1460. Make Two Arrays Equal by Reversing Subarrays
+def canBeEqual(target: List[int], arr: List[int]) -> bool:
+    target.sort()
+    arr.sort()
+    return arr == target
+
+print(canBeEqual(target = [1,2,3,4], arr = [2,4,3,3]))
