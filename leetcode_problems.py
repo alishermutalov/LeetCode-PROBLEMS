@@ -124,3 +124,7 @@ def getConcatenation(nums: List[int]) -> List[int]:
     return nums+nums
     
 print(getConcatenation([1,2,1]))
+
+#1920. Build Array from Permutation
+def buildArray(nums: List[int]) -> List[int]:
+    return [nums[nums[i]] for i in range(len(nums))]
