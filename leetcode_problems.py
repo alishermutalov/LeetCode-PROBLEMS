@@ -118,3 +118,9 @@ def kLengthApart(nums: List[int], k: int) -> bool:
     return True
       
 print(kLengthApart(nums = [1,0,0,1,0,0,1], k = 2))
+
+#1929. Concatenation of Array
+def getConcatenation(nums: List[int]) -> List[int]:
+    return nums+nums
+    
+print(getConcatenation([1,2,1]))
