@@ -173,5 +173,18 @@ def reverseStr(s: str, k: int) -> str:
         res.append(s[i + k:i + 2 * k])
             
     return ''.join(res)
-    
-reverseStr(s = "abcdefg", k = 2)
+
+#844. Backspace String Compare
+def backspaceCompare(s: str, t: str) -> bool:
+    def process_string(string):
+        stack = []
+        for char in string:
+            if char == "#":
+                if stack:  # Remove the last character if possible
+                    stack.pop()
+            else:
+                stack.append(char)
+        return "".join(stack)  # Reconstruct the string without backspaces
+    return process_string(s)==process_string(t)
+
+print(backspaceCompare(s = "ab#c", t = "ad#c"))
