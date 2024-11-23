@@ -149,3 +149,18 @@ def maxProduct(nums: List[int]) -> int:
     return max1*max2
 
 print(maxProduct([3,7]))
+
+#1154. Day of the Year
+def dayOfYear(date: str) -> int:
+    year = date.split('-')[0]
+    month = date.split('-')[1][1] if date.split('-')[1][0] == '0' else date.split('-')[1]
+    day = date.split('-')[2]
+    february = 29 if int(year)%4==0 else 28
+    days_of_months = [31, february, 31,30,31,30,31,31,30,31,30,31]
+    res = 0
+    for i in range(int(month)-1):
+        res+=days_of_months[i]
+    
+    return res + int(day)
+        
+print(dayOfYear("2019-02-10"))
