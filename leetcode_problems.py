@@ -164,3 +164,14 @@ def dayOfYear(date: str) -> int:
     return res + int(day)
         
 print(dayOfYear("2019-02-10"))
+
+#541. Reverse String II
+def reverseStr(s: str, k: int) -> str:
+    res = []
+    for i in range(0,len(s),2*k):
+        res.append(s[i:i+k][::-1])
+        res.append(s[i + k:i + 2 * k])
+            
+    return ''.join(res)
+    
+reverseStr(s = "abcdefg", k = 2)
