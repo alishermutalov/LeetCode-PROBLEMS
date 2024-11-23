@@ -138,4 +138,14 @@ def constructRectangle(area: int) -> List[int]:
             L = area // W
             return [L, W]
         W -= 1
+        
 print(constructRectangle(122122))
+
+#1464. Maximum Product of Two Elements in an Array
+def maxProduct(nums: List[int]) -> int:
+    max1 = nums.pop(nums.index(max(nums)))-1
+    max2 = nums.pop(nums.index(max(nums)))-1
+    
+    return max1*max2
+
+print(maxProduct([3,7]))
