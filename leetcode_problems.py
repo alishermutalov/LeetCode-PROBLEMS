@@ -128,3 +128,14 @@ print(getConcatenation([1,2,1]))
 #1920. Build Array from Permutation
 def buildArray(nums: List[int]) -> List[int]:
     return [nums[nums[i]] for i in range(len(nums))]
+
+#492. Construct the Rectangle
+def constructRectangle(area: int) -> List[int]:
+    W = int(math.sqrt(area))
+    
+    while W > 0:
+        if area % W == 0:
+            L = area // W
+            return [L, W]
+        W -= 1
+print(constructRectangle(122122))
