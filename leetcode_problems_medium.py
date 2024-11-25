@@ -11,12 +11,15 @@ def rotateTheBox(box: List[List[str]]) -> List[List[str]]:
                 if i[x]=='#' and i[x+1]=='.':
                     i[x], i[x+1] = i[x+1], i[x]
     
-    res = [x for x in reversed(box)]
-    for i in range(len(box)):
-        for j in range(1,len(box)+1):
-            pass
-    print(box)
-    print(res)                
+    reversed_box = [x for x in reversed(box)]
+    result = []
+    for i in range(row):
+        new_list = []
+        for j in range(column):
+            new_list.append(reversed_box[j][i])
+        result.append(new_list)
+    
+    return result              
           
         
     
