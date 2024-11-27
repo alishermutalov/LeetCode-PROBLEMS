@@ -19,13 +19,19 @@ def rotateTheBox(box: List[List[str]]) -> List[List[str]]:
             new_list.append(reversed_box[j][i])
         result.append(new_list)
     
-    return result              
-          
-        
-    
-    
-     
+    return result            
+       
 rotateTheBox([["#","#","*",".","*","."],
               ["#","#","#","*",".","."],
               ["#","#","#",".","#","."]])
 
+#1509. Minimum Difference Between Largest and Smallest Value in Three Moves
+def minDifference(nums: List[int]) -> int:  
+    n = len(nums)
+    if n < 5:
+            return 0
+    nums.sort()
+    res = min([nums[-1]-nums[3],nums[-2]-nums[2], nums[-3]-nums[1], nums[-4]-nums[0]])
+    return res
+        
+print(minDifference([3,100,20]))
