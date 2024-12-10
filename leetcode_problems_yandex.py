@@ -83,3 +83,11 @@ def isValid(s: str) -> bool:
         
     return len(stack)==0
 
+#350. Intersection of Two Arrays II
+def intersect(nums1: List[int], nums2: List[int]) -> List[int]:
+        res = []
+        for i in nums1:
+            if i in nums2:
+                res.append(i)
+                nums2.remove(i)
+        return res
