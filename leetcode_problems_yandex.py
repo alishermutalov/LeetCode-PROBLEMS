@@ -1,5 +1,5 @@
 from typing import List
-
+#228. Summary Ranges
 def summaryRanges(nums: List[int]) -> List[str]:
     if not nums:  
         return []
@@ -21,4 +21,14 @@ def summaryRanges(nums: List[int]) -> List[str]:
         
     return result
             
-            
+#283. Move Zeroes
+def moveZeroes(nums: List[int]) -> None:
+    left = 0
+    for right in range(len(nums)):
+        if nums[right] != 0:
+            nums[left], nums[right] = nums[right], nums[left]
+            left += 1
+    
+
+print(moveZeroes([0,1,0,3,12]))
+                
