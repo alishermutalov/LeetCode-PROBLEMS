@@ -47,3 +47,10 @@ def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
 
         return prev   
         
+def isPalindrome(s: str) -> bool:
+        new_s = []
+        for i in s.lower():
+            if i.isalpha() or i.isnumeric():
+                new_s.append(i)
+        reversed_text = reversed(new_s)
+        return ''.join(new_s) == ''.join(reversed_text)
