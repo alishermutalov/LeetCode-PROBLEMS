@@ -64,3 +64,22 @@ def sortedSquares(nums: List[int]) -> List[int]:
     return nums
 
 print(sortedSquares([-4,-1,0,3,10]))
+
+#20. Valid Parentheses
+def isValid(s: str) -> bool:
+    stack = []
+    pairs = {')':'(', '}':'{', ']':'['}
+    
+    for char in s:
+        if char in pairs.values():
+            stack.append(char)
+        elif char in pairs.keys():
+            if stack and stack[-1]==pairs[char]:
+                stack.pop()
+            else:
+                return False
+        else:
+            return False
+        
+    return len(stack)==0
+
