@@ -46,7 +46,8 @@ def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
             current = next_node
 
         return prev   
-        
+    
+#125. Valid Palindrome
 def isPalindrome(s: str) -> bool:
         new_s = []
         for i in s.lower():
@@ -54,3 +55,12 @@ def isPalindrome(s: str) -> bool:
                 new_s.append(i)
         reversed_text = reversed(new_s)
         return ''.join(new_s) == ''.join(reversed_text)
+
+#977. Squares of a Sorted Array
+def sortedSquares(nums: List[int]) -> List[int]:
+    for i in range(len(nums)):
+        nums[i]=nums[i]*nums[i]
+    nums.sort()
+    return nums
+
+print(sortedSquares([-4,-1,0,3,10]))
