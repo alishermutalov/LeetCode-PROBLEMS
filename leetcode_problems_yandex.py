@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 #228. Summary Ranges
 def summaryRanges(nums: List[int]) -> List[str]:
     if not nums:  
@@ -29,6 +29,21 @@ def moveZeroes(nums: List[int]) -> None:
             nums[left], nums[right] = nums[right], nums[left]
             left += 1
     
+#206. Reverse Linked List
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
-print(moveZeroes([0,1,0,3,12]))
-                
+def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None
+        current = head
+
+        while current:
+            next_node = current.next 
+            current.next = prev     
+            prev = current       
+            current = next_node
+
+        return prev   
+        
