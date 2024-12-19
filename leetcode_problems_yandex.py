@@ -91,3 +91,19 @@ def intersect(nums1: List[int], nums2: List[int]) -> List[int]:
                 res.append(i)
                 nums2.remove(i)
         return res
+
+# 849. Maximize Distance to Closest Person
+def maxDistToClosest(seats: List[int]) -> int:
+        starts_list = []
+        max_distance = 0
+        for i in range(len(seats)):
+            if seats[i]==1:
+                starts_list.append(i)
+                
+        print(starts_list)
+        
+          
+
+
+
+

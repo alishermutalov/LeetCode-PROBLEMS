@@ -188,3 +188,21 @@ def backspaceCompare(s: str, t: str) -> bool:
     return process_string(s)==process_string(t)
 
 print(backspaceCompare(s = "ab#c", t = "ad#c"))
+
+
+def findDifference(nums1: List[int], nums2: List[int]) -> List[List[int]]:
+    nums1_set = set(nums1)
+    nums2_set = set(nums2)
+    
+    ans1 = []
+    ans2 = []
+    
+    for num in nums1_set:
+        if num not in nums2_set:
+            ans1.append(num)
+            
+    for num in nums2_set:
+        if num not in nums1_set:
+            ans2.append(num)
+            
+    return [ans1,ans2]   
